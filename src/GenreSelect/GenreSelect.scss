@@ -1,0 +1,21 @@
+@import "../variables.scss";
+
+.genre-select {
+  &__genres {
+    // border-bottom: 2px solid $gray-1;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  &__genre {
+    border-bottom: 2px solid $gray-1;
+    cursor: pointer;
+    transition: none;
+
+    &.active,
+    &:hover {
+      border-bottom: 4px solid $red;
+    }
+  }
+}
