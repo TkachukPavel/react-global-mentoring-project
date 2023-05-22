@@ -3,17 +3,9 @@ import "./App.css";
 import Counter from "./Counter/Counter";
 import GenreSelect from "./GenreSelect/GenreSelect";
 import Search from "./Search/Search";
-
-export const genres = [
-  { id: 0, name: "All" },
-  { id: 1, name: "Comedy" },
-  { id: 2, name: "Horror" },
-  { id: 3, name: "Crime" },
-];
+import { genres } from "./data";
 
 function App() {
-  const [selectedGenre, setSelectedGenre] = useState(genres[0].id);
-
   return (
     <>
       <div className="container App">
@@ -45,10 +37,9 @@ function App() {
           <div className="row my-2">
             <GenreSelect
               genres={genres}
-              selectedGenre={selectedGenre}
+              selectedGenre={genres[0]}
               onSelect={(genre) => {
-                setSelectedGenre(genre.id);
-                alert(`${genre.name} selected!`);
+                alert(`${genre} selected!`);
               }}
             />
           </div>

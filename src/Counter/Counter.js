@@ -35,15 +35,21 @@ export default class Counter extends Component {
         {
           className: "btn btn-light",
           onClick: () => this.decrementValue(),
+          "data-testid": "dec-button",
         },
         "-"
       ),
-      createElement("span", { className: "px-3" }, this.state.value),
+      createElement(
+        "span",
+        { className: "px-3", "data-testid": "val" },
+        this.state.value
+      ),
       createElement(
         "button",
         {
           className: "btn btn-light",
           onClick: () => this.incrementValue(),
+          "data-testid": "inc-button",
         },
         "+"
       )
