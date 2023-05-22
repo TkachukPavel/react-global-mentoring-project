@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Counter from "./Counter/Counter";
 import GenreSelect from "./GenreSelect/GenreSelect";
