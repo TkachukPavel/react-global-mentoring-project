@@ -1,11 +1,12 @@
 import { createElement, Component } from "react";
+import PropTypes from "prop-types";
 
 export default class Counter extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      value: props.initValue,
+      value: props.initValue || 0,
     };
   }
 
@@ -29,7 +30,7 @@ export default class Counter extends Component {
   render() {
     return createElement(
       "div",
-      { className: "p-3" },
+      { className: "p-3 montserrat-font" },
       createElement(
         "button",
         {
@@ -56,3 +57,14 @@ export default class Counter extends Component {
     );
   }
 }
+
+Counter.propTypes = {
+  /**
+   * Initial counter value
+   */
+  initValue: PropTypes.number,
+};
+
+Counter.defaultProps = {
+  initValue: 0,
+};

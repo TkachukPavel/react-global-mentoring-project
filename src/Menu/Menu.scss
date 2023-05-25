@@ -1,0 +1,30 @@
+@import "../variables.scss";
+
+.menu {
+  &__button {
+    &--hide-arrow::after {
+      border: none !important;
+      margin: 0 !important;
+    }
+  }
+
+  &__item {
+    &:hover {
+      background-color: $red;
+    }
+  }
+
+  &__list {
+  }
+
+  & .dropdown-toggle::after {
+    border-color: $red;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    margin-left: 13px;
+  }
+
+  .btn {
+    border: none !important;
+  }
+}

@@ -6,7 +6,7 @@ import { default as user } from "@testing-library/user-event";
 
 describe("Counter", () => {
   test("it displays initial value", () => {
-    render(<Counter initValue="42" />);
+    render(<Counter initValue={42} />);
     expect($("val")).toHaveTextContent(42);
   });
 
@@ -26,5 +26,11 @@ describe("Counter", () => {
     act(() => user.click($("dec-button")));
 
     expect($("val")).toHaveTextContent(initValue - 1);
+  });
+
+  test("it sets default value to zero", () => {
+    render(<Counter />);
+
+    expect($("val")).toHaveTextContent(0);
   });
 });

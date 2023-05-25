@@ -1,0 +1,23 @@
+@import "../variables.scss";
+
+.search-control {
+  &__label {
+  }
+
+  &__menu {
+    border: none !important;
+
+    &.dropdown-toggle::after {
+      border-color: $red;
+      border-right-color: transparent;
+      border-left-color: transparent;
+      margin-left: 13px;
+    }
+  }
+
+  &__menu-item {
+    &:hover {
+      background-color: $red;
+    }
+  }
+}

@@ -7,7 +7,7 @@ import { $ } from "../test-utils";
 describe("Search", () => {
   test("it should prefill input with init query", () => {
     const query = "Hello, world!";
-    render(<Search initQuery={query} />);
+    render(<Search initQuery={query} onSearch={() => {}} />);
 
     expect($("search-input")).toHaveValue(query);
   });

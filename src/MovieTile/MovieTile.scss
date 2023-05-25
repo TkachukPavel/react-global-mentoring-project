@@ -1,0 +1,45 @@
+@import "../variables.scss";
+
+.movie-tile {
+  max-width: 322px !important;
+  border: none;
+  &__image {
+    width: 322px !important;
+    height: 455px !important;
+  }
+
+  &__menu-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  &__menu {
+    right: 16px;
+    top: 16px;
+    display: none;
+  }
+
+  &:hover &__menu {
+    display: block;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__genre {
+    font-size: 14px;
+  }
+
+  &__badge {
+    font-size: 14px;
+    border-color: $gray-1 !important;
+  }
+
+  &__year {
+    font-size: 14px;
+  }
+
+  &__body {
+  }
+}

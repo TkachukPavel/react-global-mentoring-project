@@ -1,5 +1,6 @@
-import { useState } from "react";
 import "./GenreSelect.scss";
+import { useState } from "react";
+import PropTypes from "prop-types";
 
 export default function GenreSelect({ genres, selectedGenre, onSelect }) {
   const [currentGenre, setCurrentGenre] = useState(selectedGenre);
@@ -10,7 +11,7 @@ export default function GenreSelect({ genres, selectedGenre, onSelect }) {
   }
 
   return (
-    <nav className="navbar navbar-expand bg-color-gray-2 genre-select">
+    <nav className="navbar navbar-expand bg-color-black genre-select montserrat-font">
       <ul className="navbar-nav mr-auto genre-select__genres">
         {genres.map((genre) => (
           <li
@@ -28,3 +29,20 @@ export default function GenreSelect({ genres, selectedGenre, onSelect }) {
     </nav>
   );
 }
+
+GenreSelect.propTypes = {
+  /**
+   * List of available genres
+   */
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+
+  /**
+   * Pre selected genre
+   */
+  selectedGenre: PropTypes.string.isRequired,
+
+  /**
+   * On genre select handler
+   */
+  onSelect: PropTypes.func.isRequired,
+};
